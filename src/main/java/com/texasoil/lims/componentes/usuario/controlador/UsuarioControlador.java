@@ -43,9 +43,9 @@ public class UsuarioControlador {
 		return ResponseEntity.ok().body(usuarioServicio.actualizarUsuario(usuario));
 }
 	@DeleteMapping("/usuarios/{id}")
-	public HttpStatus eliminarUsuario(@PathVariable long id){
+	public ResponseEntity<Void> eliminarUsuario(@PathVariable long id){
 		this.usuarioServicio.eliminarUsuario(id);
-		return HttpStatus.OK;
+	    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 }
 	
 }

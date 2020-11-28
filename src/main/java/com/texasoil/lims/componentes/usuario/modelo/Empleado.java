@@ -5,7 +5,7 @@ import javax.persistence.Column;
 
 
 
-public class Empleado {
+public class Empleado extends Usuario {
 
 	@Column(name="Codigo")
 	private long codigo;
