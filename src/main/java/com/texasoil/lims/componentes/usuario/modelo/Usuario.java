@@ -15,6 +15,9 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	@Column(name="cedula")
+	private String cedula;
+	
 	@Column(name="nombre")
 	private String nombre;
 	
